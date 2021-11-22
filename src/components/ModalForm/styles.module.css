@@ -1,0 +1,11 @@
+.field {
+  padding: 8px 0;
+}
+.field:nth-child(2n - 1) {
+  border-right: 1px solid #c4c4c4;
+}
+
+.fieldName {
+}
+.fieldValue {
+}

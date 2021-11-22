@@ -6,7 +6,7 @@ const toolbar = [
     operationCaption: "Обновить",
     operationDescription: "Обновление страницы",
     operationMethod: "refreshPage",
-    id: 164
+    id: 164,
   },
   // выгружает данные таблицы в эксель (просто вывод данных таблицы через console.log)
   {
@@ -15,8 +15,8 @@ const toolbar = [
     operationCaption: "В Excel",
     operationDescription: "В Excel",
     operationMethod: "exportData",
-    id: 165
-  }
+    id: 165,
+  },
 ];
 
 const contextOperations = [
@@ -25,43 +25,43 @@ const contextOperations = [
     ord: 1,
     name: "open",
     caption: "Открыть",
-    method: "editObject"
+    method: "editObject",
   },
   // выгружает данные таблицы в эксель (просто вывод данных таблицы через console.log)
   {
     ord: 2,
     name: "exportData",
     caption: "В Excel",
-    method: "exportData"
-  }
+    method: "exportData",
+  },
 ];
 
 const columns = [
   {
     title: "First name",
     dataIndex: "firstName",
-    key: "firstName"
+    key: "firstName",
   },
   {
     title: "Last name",
     dataIndex: "lastName",
-    key: "lastName"
+    key: "lastName",
   },
   {
     title: "Sex",
     dataIndex: "sex",
-    key: "sex"
+    key: "sex",
   },
   {
     title: "Age",
     dataIndex: "age",
-    key: "age"
+    key: "age",
   },
   {
     title: "Address",
     dataIndex: "address",
-    key: "address"
-  }
+    key: "address",
+  },
 ];
 
 const data = [
@@ -71,7 +71,7 @@ const data = [
     lastName: "Brown",
     sex: "male",
     address: "New York No. 1 Lake Park",
-    age: 32
+    age: 32,
   },
   {
     key: "2",
@@ -79,7 +79,7 @@ const data = [
     lastName: "Green",
     sex: "female",
     address: "London No. 1 Lake Park",
-    age: 42
+    age: 42,
   },
   {
     key: "3",
@@ -87,20 +87,20 @@ const data = [
     lastName: "Yellow",
     sex: "male",
     address: "Sidney No. 1 Lake Park",
-    age: 36
-  }
+    age: 36,
+  },
 ];
 
 const dblClickOperation = {
   name: "open",
-  method: "editObject"
+  method: "editObject",
 };
 
 const gridData = {
   columns,
   contextOperations,
   toolbar,
-  dblClickOperation
+  dblClickOperation,
 };
 
 /**
@@ -122,7 +122,7 @@ export function fetchData() {
   const promise = new Promise((resolve) => {
     setTimeout(() => {
       resolve(data);
-    }, 1000);
+    }, 2000);
   });
   return promise;
 }
