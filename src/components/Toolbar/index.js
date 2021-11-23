@@ -7,7 +7,9 @@ const Toolbar = (props) => {
     <Row gutter={[16, 16]}>
       {actions.map((action) => (
         <Col key={action.id}>
-          <Button onClick={action.runMethod}>{action.operationCaption}</Button>
+          <Button onClick={action.runMethod} disabled={action.disabled}>
+            {action.operationCaption}
+          </Button>
         </Col>
       ))}
     </Row>

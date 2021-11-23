@@ -1,12 +1,20 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Table as AntTable } from "antd";
 import Toolbar from "components/Toolbar";
 import PopupContextMenu from "components/PopupContextMenu";
 import s from "./styles.module.css";
+import { TemplateTableContext } from "contexts/TemplateTable";
 
-const Table = (props) => {
-  const { data, columns, toolbarActions, contextActions, dblClickAction } =
-    props;
+const Table = () => {
+  const {
+    data,
+    gridData,
+    toolbarActions,
+    contextActions,
+    dblClickAction,
+    isLoading,
+  } = useContext(TemplateTableContext);
+
   const [menu, setMenu] = useState({
     visible: false,
     x: 0,
@@ -38,8 +46,9 @@ const Table = (props) => {
       {toolbarActions && <Toolbar actions={toolbarActions} />}
       <AntTable
         dataSource={data}
-        columns={columns}
+        columns={gridData?.columns}
         pagination={false}
+        loading={isLoading}
         onRow={(record, rowIndex) => {
           return {
             onDoubleClick: () => {

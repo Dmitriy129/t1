@@ -187,3 +187,6 @@ const gridData = {
   toolbar,
   dblClickOperation
 };
+
+// обновлять только данные
+// добавить контекст

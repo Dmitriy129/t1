@@ -122,7 +122,7 @@ export function fetchData() {
   const promise = new Promise((resolve) => {
     setTimeout(() => {
       resolve(data);
-    }, 2000);
+    }, 1000);
   });
   return promise;
 }

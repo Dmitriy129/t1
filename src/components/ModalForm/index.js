@@ -1,9 +1,10 @@
 import { Col, Modal, Row } from "antd";
-import React from "react";
+import { TemplateModalContext } from "contexts/TemplateTable";
+import React, { useContext } from "react";
 import s from "./styles.module.css";
 
-const ModalForm = (props) => {
-  const { visible, close, data } = props;
+const ModalForm = () => {
+  const { visible, close, data } = useContext(TemplateModalContext);
 
   return (
     <Modal visible={visible} title="Record data" onCancel={close} footer={null}>
